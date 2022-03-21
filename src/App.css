@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+.container{
+  color: red;
+  background-color: aquamarine;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.person{
+  background-color: #ddd;
+  border: 3px solid indigo;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: all 0.5s ;
+}
+.person:hover{
+  background-color: indianred;
+  color: #ddd;
+}
+.myDiv{
+  background-color: #ddd;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 100px;
+}
+.container a, .myDiv a{
+  padding: 5px 20px;
+  background-color: indigo;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+
+
+
