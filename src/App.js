@@ -2,51 +2,53 @@
 
 import logo from "./logo.svg";
 import "./App.css";
-const kali = {
-  Name: 'Kalim Ullah', Profession: 'Software Engineer'
-}
-const number = 55555;
 function App() {
+  const number = 55555;
+  const speker = [
+    { Name: 'Mijanur Rahman', Job: 'Was Mahfil' },
+    { Name: 'Hafizur Rahman', Job: 'Was Mahfil' },
+    { Name: 'Mofuzur Rahman', Job: 'Was Mahfil' },
+    { Name: 'Musbahur Rahman', Job: 'Was Mahfil' }
+  ];
+  const name = ['Jahangir', 'Abdullah', 'Imran', 'Saiful', 'Mozib', 'Kalim Ullah', 'Yasin Arfat'];
   return (
     <div className='App'>
-      <h1>Kalim Ullah</h1>
-      <Person></Person>
-      <h5>New Components. YAY</h5>
-      <Friend></Friend>
-      <Kali></Kali>
-      <p>Name: { kali.Name}</p>
-      <i>Name: {kali.Profession}</i>
-      <br />
-      <span>Total: {11111 + number}</span>
+      {
+        name.map(kali => <li>Name: { kali }</li>)
+      }
+      {
+        name.map(kali => <Person name={kali}></Person>)
+      }
+      {/* <Person name={name[0]} speker="Quran"></Person>
+      <Person name="BppRazz" singer={ name[2]}></Person>
+      <Person name="Jahangir" job="Software Engineer"></Person> */}
+      <h5>New Components. YAY.</h5>
+      <p id='toto'>Rock mama. Rect mama.</p>
+      <Friend phone="01777"></Friend>
     </div>
   );
 }
-function Person() {
+function Person(props) { 
   return (
-    <div className='person'>
-      <h1>Sakib Al Hasan</h1>
-      <p>Profession: Cricket</p>
-    </div>
-  );
-}
-
-function Friend() {
-  return (
-    <div class='container'>
-      <a href="https://youtube.com">Click Hire!</a>
-      <h3>Name: Ajay Devgun</h3>
-      <p>Job: Maramari</p>
+    <div className="person">
+      <h1>{ props.name}</h1>
+      <p>{props.speker} {props.singer} { props.job}</p>
     </div>
   )
 }
-
-function Kali() { 
+function Friend(props) { 
+  // console.log(props)
   return (
-    <div class="myDiv">
-      <a href="https://youtube.com">Click Hire!</a>
-      <p>Lorem Ipsum</p>
+    <div className="friend">
+      <h1>Ali Hasan</h1>
+      <p>Phone: { props.phone}</p>
     </div>
+
   )
 }
+
+
+
+
 
 export default App;
