@@ -3,21 +3,24 @@
 import logo from "./logo.svg";
 import "./App.css";
 function App() {
-  const number = 55555;
-  const speker = [
-    { Name: 'Mijanur Rahman', Job: 'Was Mahfil' },
-    { Name: 'Hafizur Rahman', Job: 'Was Mahfil' },
-    { Name: 'Mofuzur Rahman', Job: 'Was Mahfil' },
-    { Name: 'Musbahur Rahman', Job: 'Was Mahfil' }
-  ];
-  const name = ['Jahangir', 'Abdullah', 'Imran', 'Saiful', 'Mozib', 'Kalim Ullah', 'Yasin Arfat'];
+  // const number = 55555;
+  const spekers = [
+  {Name: 'Dr. Mizanur Rahman', Job: 'Malaysia'},
+  {Name: 'MO Hafizur Rahman', Job: 'Bangladesh'},
+  {Name: 'MO Mofizur Rahman', Job: 'Quaqata'},
+  {Name: 'HM Kalim Ullah', Job: 'Software Engineer'}
+]
+  const names = ['Jahangir', 'Abdullah', 'Imran', 'Saiful', 'Mozib', 'Kalim Ullah', 'Yasin Arfat'];
   return (
     <div className='App'>
       {
-        name.map(kali => <li>Name: { kali }</li>)
+        names.map(name=> <li>{name}</li>)
       }
+      {/* {
+        names.map(name=> <Person name={name}></Person>)
+      } */}
       {
-        name.map(kali => <Person name={kali}></Person>)
+        spekers.map(speker=> <Person name={speker.Name}></Person>)
       }
       {/* <Person name={name[0]} speker="Quran"></Person>
       <Person name="BppRazz" singer={ name[2]}></Person>
